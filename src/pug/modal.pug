@@ -1,0 +1,30 @@
+include lib/variables
+include lib/mixins
+include blocks/page
+include components/radio
+
++page(pagesList.index.title)
+  #consultation-popup.barrier-popup.barrier-configurator
+    .barrier-popup__overlay
+    .barrier-popup__content
+      button#popup-close.barrier-popup__close(type='button' aria-label='Закрыть окно')
+      .barrier-popup__illustration
+        img(src='/img/consultant.svg' alt='Отправить заявку' width='230' height='135')
+      h3.barrier-popup__title Получить консультацию
+      p.barrier-popup__description Наш сотрудник свяжется с&nbsp;вами в&nbsp;ближайшее время
+      form#consultation-form.barrier-popup__form
+        .barrier-popup__field
+          label.barrier-popup__label Имя
+          input.barrier-popup__input(type='text' name='name' placeholder='Имя' required='')
+        .barrier-popup__field
+          label.barrier-popup__label
+            | Email
+            span.barrier-popup__required *
+          input.barrier-popup__input(type='email' name='email' placeholder='Email' required='')
+        .barrier-popup__field
+          label.barrier-popup__label
+            | Сообщение
+            span.barrier-popup__required *
+          textarea.barrier-popup__textarea(name='message' placeholder='Сообщение' rows='4' required='')
+        
+        button#popup-submit-btn.barrier-popup__submit.bc__button.bc__button--full(type='submit' disabled='') Отправить

@@ -1,0 +1,90 @@
+@import '../lib/mixins';
+
+.barrier-configurator {
+    .bc__button {
+        @include button-base;
+        color: var(--color-white);
+        font-family: inherit;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 120%;
+        border-radius: 14px;
+        min-height: 48px;
+        padding-left: 36px;
+        padding-right: 36px;
+        width: 100%;
+
+        &:disabled,
+        &:disabled:active,
+        &.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        &--full {
+            max-width: 100%;
+        }
+
+        &--outline {
+            background-color: transparent; 
+            border: 2px solid var(--color-white);
+
+            &:hover:not(:disabled) {
+                background-color: var(--color-black);
+                border-color: var(--color-black);
+            }
+        }
+
+        &--black {
+            background-color: var(--text-black);
+            color: var(--color-white);
+            padding: 20px 32px;
+            border-radius: 20px;
+
+            &:hover:not(:disabled) {
+                background-color: var(--color-black);
+            }
+        }
+
+        &__burger, 
+        &__phone {
+            @include button-base;
+            padding: 0;
+            background-color: transparent;
+            outline: none;
+        }
+    }
+
+    .bc__button--wrapper {
+        margin-top: 40px;
+    }
+
+    @media screen and (min-width: 451px) {
+        .bc__button {
+            border-radius: 24px;
+            font-size: 20px;
+        }
+
+        .bc__button--wrapper {
+            margin-top: 52px;
+        }
+    }
+
+    @media screen and (min-width: 901px) {
+        .bc__button:not(.bc__button--full) {
+            max-width: 360px;
+        }
+    }
+
+    @media screen and (min-width: 1601px) {
+        .bc__button--wrapper {
+            margin-left: 52px;
+        }
+    }
+
+    @media screen and (min-width: 1901px) {
+        .bc__button--wrapper {
+            margin-top: 64px;
+        }
+    }
+}

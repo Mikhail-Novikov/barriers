@@ -1,0 +1,36 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --text-black: #22252F;
+  --border-gray: #2D333C;
+  --gray-400: #E2E3EA;
+  --text-gray-light: #7F808A;
+  --text-gray: #8E8F9E;
+  --bg-soft: #efefef;
+  --bg-blue: #e0f2f7;
+  --bg-green: #e6ffe6;
+  --bg-red: #ffe6e6;
+  --bg-hover: #f9f9f9;
+  --color-green: #008000;
+  --color-red: #eb3423;
+}
+
+// Breakpoints
+$mobile-small: 450px;
+$mobile: 712px;
+$mobile-medium: 600px;
+$mobile-451: 451px;
+$tablet: 901px;
+$desktop: 1400px;
+$tablet-small: 1200px;
+
+$mobile_header: 1024;
+
+// Spacing
+$offset-option: 50px;
+
+// Transitions
+$transition-default: all 0.3s;
+
+// Font
+$font-family: Manrope-Regular, 'Helvetica Neue', Arial, -apple-system, system-ui, sans-serif;

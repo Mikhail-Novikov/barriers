@@ -1,0 +1,105 @@
+@import "../lib/mixins";
+@import "../lib/variables";
+@import "../helpers/media";
+
+.barrier-configurator .bc__header {
+  background-color: var(--text-gray);
+  margin-bottom: 60px;
+
+  &>.bc__header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+  }
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &-menu {
+    &-container {
+      display: flex;
+      gap: 80px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: var(--color-white);
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 120%;
+        position: relative;
+      }
+
+      a::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background: var(--color-white);
+        transition: width 0.3s ease-out;
+      }
+
+      a:hover::after {
+          width: 100%;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .barrier-configurator .bc__header {
+    &-menu {
+      &-container {
+        gap: 40px;
+      }
+    }
+  }
+}
+
+@include laptop {
+  .barrier-configurator .bc__header {
+    margin-bottom: 20px;
+
+    &>.bc__header-wrapper {
+      padding: 14.5px 0;
+    }
+
+    &-menu-item a {
+      font-size: 16px;
+    }
+
+    &-logo {
+      img {
+        width: 60px;
+        width: clamp(60px, 10vw, 137px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$mobile_header + 'px'}) {
+  .barrier-configurator .bc__header {
+
+    &>.bc__header-wrapper {
+      padding: 14.5px 0;
+    }
+
+    &-menu,
+    &-control .bc__button {
+      display: none;
+    }
+  }
+}

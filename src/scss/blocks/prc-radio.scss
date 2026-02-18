@@ -1,0 +1,86 @@
+@import '../lib/mixins';
+
+.barrier-configurator {
+  .bc__radio {
+    padding: 10px 0;
+  }
+
+  .bc__radio-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .bc__radio-input {
+    @include hidden-input;
+
+    &:checked+.bc__radio-label::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      background-color: var(--border-gray);
+      border-radius: 50%;
+    }
+
+    &:not(:checked)+.bc__radio-label::before {
+      border-color: var(--text-gray);
+    }
+  }
+
+  .bc__radio-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--text-black);
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border: 1.5px solid var(--border-gray);
+      @include border-radius(50%);
+      background-color: transparent;
+      @include transition;
+    }
+
+    @include hover-color(var(--text-black));
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .barrier-configurator {
+    .bc__radio-label::before {
+      width: 24px;
+      height: 24px;
+    }
+
+    .bc__radio-input:checked+.bc__radio-label::after {
+      width: 16px;
+      height: 16px;
+      left: 4px;
+    }
+
+    .bc__radio-label {
+      gap: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .barrier-configurator {
+    .bc__radio-label {
+      gap: 24px;
+      font-size: 24px;
+    }
+  }
+}

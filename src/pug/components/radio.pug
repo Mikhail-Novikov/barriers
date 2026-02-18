@@ -1,0 +1,15 @@
+mixin radio(id, name, value, label = '', checked = false)
+    div.bc__radio
+        input.bc__radio-input(
+            id=id
+            type='radio'
+            name=name
+            value=value
+            checked=checked
+        )
+        if label
+            label.bc__radio-label(for=id)= label
+        else
+            label.bc__radio-label(for=id)
+                block
+

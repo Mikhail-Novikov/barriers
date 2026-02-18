@@ -1,0 +1,114 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --text-black: #22252F;
+  --border-gray: #2D333C;
+  --gray-400: #E2E3EA;
+  --text-gray-light: #7F808A;
+  --text-gray: #8E8F9E;
+  --bg-soft: #efefef;
+  --bg-blue: #e0f2f7;
+  --bg-green: #e6ffe6;
+  --bg-red: #ffe6e6;
+  --bg-hover: #f9f9f9;
+  --color-green: #008000;
+  --color-red: #eb3423;
+}
+
+.barrier-configurator .bc__header {
+  background-color: var(--text-gray);
+  margin-bottom: 3.75rem;
+}
+
+.barrier-configurator .bc__header > .bc__header-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.barrier-configurator .bc__header-logo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.barrier-configurator .bc__header-menu-container {
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5rem;
+}
+
+.barrier-configurator .bc__header-menu-item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.barrier-configurator .bc__header-menu-item a {
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 120%;
+  position: relative;
+}
+
+.barrier-configurator .bc__header-menu-item a::after {
+  content: '';
+  position: absolute;
+  bottom: -0.1875rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 0;
+  height: 0.125rem;
+  background: var(--color-white);
+  transition: width 0.3s ease-out;
+}
+
+.barrier-configurator .bc__header-menu-item a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 85.375rem) {
+  .barrier-configurator .bc__header-menu-container {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 80rem) {
+  .barrier-configurator .bc__header {
+    margin-bottom: 1.25rem;
+  }
+  .barrier-configurator .bc__header > .bc__header-wrapper {
+    padding: 0.90625rem 0;
+  }
+  .barrier-configurator .bc__header-menu-item a {
+    font-size: 1rem;
+  }
+  .barrier-configurator .bc__header-logo img {
+    width: 3.75rem;
+    width: clamp(3.75rem, 10vw, 8.5625rem);
+  }
+}
+
+@media screen and (max-width: 64rem) {
+  .barrier-configurator .bc__header > .bc__header-wrapper {
+    padding: 0.90625rem 0;
+  }
+  .barrier-configurator .bc__header-menu,
+  .barrier-configurator .bc__header-control .bc__button {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=prc-header.css.map */

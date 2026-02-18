@@ -1,0 +1,37 @@
+ $transition-default: all 0.3s;
+
+// Transitions
+@mixin transition($property: $transition-default) {
+  transition: $property;
+}
+
+// Border radius
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+// Flexbox
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Button base styles
+@mixin button-base {
+  border: none;
+  cursor: pointer;
+  @include transition;
+}
+
+// Hidden input
+@mixin hidden-input {
+  display: none;
+}
+
+// Hover effect
+@mixin hover-color($color) {
+  &:hover {
+    color: $color;
+  }
+}

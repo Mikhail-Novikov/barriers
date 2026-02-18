@@ -1,0 +1,13 @@
+include lib/variables
+include lib/mixins
+include blocks/page
+include components/radio
+
++page(pagesList.index.title)
+  #consultation-popup.barrier-popup.barrier-configurator
+    .barrier-popup__overlay
+    .barrier-popup__content
+      button#popup-close.barrier-popup__close(type='button' aria-label='Закрыть окно')
+      .barrier-popup__illustration
+      h3.barrier-popup__title Спасибо за&nbsp;обращение
+      p.barrier-popup__description Ваш запрос успешно отправлен

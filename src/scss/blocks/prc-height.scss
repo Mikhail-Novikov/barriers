@@ -1,0 +1,114 @@
+@import "../lib/mixins";
+
+.barrier-configurator {
+  .bc__height-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--color-white);
+    @include border-radius(8px);
+    margin-bottom: 12px;
+    width: 100%;
+    height: 60px;
+  }
+
+  .bc__height-control-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+
+    &:has(.bc__height-radio:checked)
+      + .bc__height-control-inner
+      .bc__height-segment::after {
+      display: none;
+    }
+  }
+
+  .bc__height-radio {
+    @include hidden-input;
+
+    &:checked + .bc__height-segment {
+      color: var(--text-black);
+      box-shadow: inset 0 0 0 2px var(--border-gray);
+      @include border-radius(8px);
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .bc__height-segment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    color: var(--text-gray);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    cursor: pointer;
+    @include transition;
+    @include border-radius(8px);
+    user-select: none;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+
+    @include hover-color(var(--text-black));
+
+    &.bc__height-segment--first::after {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 2px;
+      height: 32px;
+      background-color: #e2e3ea;
+      z-index: 1;
+    }
+  }
+
+  .bc__height-divider {
+    width: 1px;
+    height: 24px;
+    background-color: #e2e3ea;
+    margin: 0 8px;
+    flex-shrink: 0;
+  }
+}
+
+@media screen and (min-width: 451px) {
+  .barrier-configurator {
+    .bc__height-control {
+      border-radius: 16px;
+      height: 80px;
+      display: inline-flex;
+      max-width: 370px;
+    }
+
+    .bc__height-radio {
+      &:checked + .bc__height-segment {
+        border-radius: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .barrier-configurator {
+    .bc__height-control {
+      .bc__height-segment {
+        font-size: 24px;
+      }
+    }
+  }
+}

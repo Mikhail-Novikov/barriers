@@ -1,0 +1,332 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --text-black: #22252F;
+  --border-gray: #2D333C;
+  --gray-400: #E2E3EA;
+  --text-gray-light: #7F808A;
+  --text-gray: #8E8F9E;
+  --bg-soft: #efefef;
+  --bg-blue: #e0f2f7;
+  --bg-green: #e6ffe6;
+  --bg-red: #ffe6e6;
+  --bg-hover: #f9f9f9;
+  --color-green: #008000;
+  --color-red: #eb3423;
+}
+
+.barrier-configurator .bc__options {
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  margin-left: 3.25rem;
+  margin-right: 3.25rem;
+}
+
+.barrier-configurator .bc__option {
+  background-color: var(--color-white);
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1.25rem;
+  padding-left: 2.375rem;
+  padding-bottom: 2rem;
+  padding-right: 2.375rem;
+  border-radius: 2.5rem;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  max-width: 50%;
+  transition: border-color 0.3s;
+}
+
+.barrier-configurator .bc__option:has(.bc__radio-input:checked) {
+  box-shadow: 0 0 0 0.0625rem var(--text-black);
+}
+
+.barrier-configurator .bc__option .bc__option-label {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.barrier-configurator .bc__option-content {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.barrier-configurator .bc__option-image {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 18.75rem;
+  border-radius: 1.5625rem;
+  overflow: hidden;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.barrier-configurator .bc__option-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  padding-left: 1.5rem;
+}
+
+.barrier-configurator .bc__option-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-top: 1.25rem;
+  margin-right: 1.5rem;
+}
+
+.barrier-configurator .bc__option.bc__option-image--small {
+  padding-top: 0;
+}
+
+.barrier-configurator .bc__option.bc__option-image--small .bc__option-image {
+  height: 12.5rem;
+}
+
+.barrier-configurator .bc__option.bc__option-image--small .bc__option-wrapper {
+  margin-top: 0;
+}
+
+.barrier-configurator .bc__option-title {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.barrier-configurator .bc__option-title .bc__radio-item {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.barrier-configurator .bc__option-title h6 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2rem;
+  word-break: break-word;
+}
+
+.barrier-configurator .bc__option-list {
+  margin-top: 0.75rem;
+  margin-left: 3rem;
+}
+
+.barrier-configurator .bc__option-list li {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  word-break: break-word;
+}
+
+@media screen and (max-width: 100rem) {
+  .barrier-configurator .bc__options {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .barrier-configurator .bc__option {
+    padding: 1.25rem 2.5rem 2rem 2.25rem;
+  }
+  .barrier-configurator .bc__option-image {
+    margin-top: 0;
+  }
+  .barrier-configurator .bc__option-image img {
+    padding: 1.5rem 1.75rem 0 1.5rem;
+  }
+  .barrier-configurator .bc__options .bc__option.bc__option-image--small {
+    padding-top: 0;
+  }
+  .barrier-configurator .bc__options .bc__option.bc__option-image--small .bc__option-image {
+    height: 12.5rem;
+  }
+  .barrier-configurator .bc__options .bc__option.bc__option-image--small .bc__option-image img {
+    padding: 0;
+  }
+  .barrier-configurator .bc__options .bc__option.bc__option-image--small .bc__option-wrapper {
+    margin-top: 0;
+  }
+  .barrier-configurator .bc__option-title h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (max-width: 87.5rem) {
+  .barrier-configurator .bc__option {
+    padding-top: 0;
+  }
+  .barrier-configurator .bc__option-wrapper {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 75rem) {
+  .barrier-configurator .bc__option {
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+  .barrier-configurator .bc__options .bc__option {
+    border-radius: 1.9375rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+  .barrier-configurator .bc__option-wrapper {
+    margin-top: 0;
+  }
+  .barrier-configurator .bc__option-title {
+    gap: 0.5rem;
+  }
+  .barrier-configurator .bc__option-list {
+    margin-left: 2.5rem;
+    margin-top: 0.5rem;
+  }
+  .barrier-configurator .bc__option-image {
+    margin-top: 0;
+  }
+  .barrier-configurator .bc__option-image img {
+    padding: 2rem 2rem 0 2rem;
+  }
+}
+
+@media screen and (max-width: 56.25rem) {
+  .barrier-configurator .bc__options {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .barrier-configurator .bc__option {
+    max-width: 100%;
+  }
+  .barrier-configurator .bc__option-title {
+    gap: 0.5rem;
+  }
+  .barrier-configurator .bc__option-list {
+    margin-left: 2.5rem;
+    margin-top: 0.5rem;
+  }
+  .barrier-configurator .bc__option-image img {
+    padding: 0 2rem;
+  }
+  .barrier-configurator .bc__options .bc__option {
+    min-height: auto;
+    padding-top: 1.25rem;
+    padding-bottom: 2.5rem;
+  }
+  .barrier-configurator .bc__option-list li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .barrier-configurator .bc__option-title h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (max-width: 44.5rem) {
+  .barrier-configurator .bc__options {
+    gap: 1.25rem;
+  }
+  .barrier-configurator .bc__options .bc__option {
+    padding-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 37.5rem) {
+  .barrier-configurator .bc__options .bc__option {
+    border-radius: 1.5625rem;
+  }
+  .barrier-configurator .bc__option-wrapper {
+    margin-top: 0;
+  }
+  .barrier-configurator .bc__option-image {
+    height: 12.5rem;
+  }
+  .barrier-configurator .bc__option-title h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 28.125rem) {
+  .barrier-configurator .bc__option {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+  .barrier-configurator .bc__options .bc__option {
+    border-radius: 1.25rem;
+    min-height: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+  .barrier-configurator .bc__option-title {
+    gap: 0.25rem;
+  }
+  .barrier-configurator .bc__option-image {
+    height: 9.6875rem;
+    margin-top: 0;
+    border-radius: 1.25rem;
+  }
+  .barrier-configurator .bc__option-image img {
+    padding: 0;
+  }
+  .barrier-configurator .bc__options {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0.75rem;
+  }
+  .barrier-configurator .bc__options .bc__option.bc__option-image--small .bc__option-image {
+    height: 6.25rem;
+  }
+  .barrier-configurator .bc__options .bc__option.bc__option-image--small {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .barrier-configurator .bc__options .bc__option.bc__option-image--small .bc__option-image {
+    left: -0.9375rem;
+  }
+  .barrier-configurator .bc__options .bc__option.bc__option-image--small .bc__option-wrapper {
+    margin-left: 2.375rem;
+  }
+  .barrier-configurator .bc__option-wrapper {
+    margin-right: 0;
+    margin-top: 0;
+  }
+  .barrier-configurator .bc__option-list {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  .barrier-configurator .bc__option-title h2 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+  .barrier-configurator .bc__option-title h3 {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+  .barrier-configurator .bc__option-wrapper .bc__option-list li {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+/*# sourceMappingURL=prc-options.css.map */

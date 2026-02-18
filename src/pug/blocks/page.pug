@@ -1,0 +1,24 @@
+mixin page(title)
+  +b.HTML.page(lang='ru')&attributes(attributes)
+    head
+      title #{title} - #{pkg.description}
+
+      meta(charset='utf-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no')
+      meta(name='description' content='')
+      meta(name='keywords' content='')
+      meta(name='author' content='')
+
+      include ../lib/favicon
+
+      link(rel='stylesheet' href='/fonts/stylesheet.css')
+      each cssFile in cssFiles
+        link(rel='stylesheet' href=cssFile)
+    +b.BODY(class="rs-body")
+      +b.MAIN.barrier-configurator
+        block
+
+      script(src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js")
+      script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+      each jsFile in jsFiles
+        script(src=jsFile) 

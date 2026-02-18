@@ -1,0 +1,158 @@
+include lib/variables
+include lib/mixins
+include blocks/page
+include components/mobileMenu
+include components/radio
+
++page(pagesList.index.title)
+  header.bc__header
+    div.bc__header-wrapper.bc-container
+      div.bc__header-logo
+        a(href="https://perco.ru" target="_blank")
+          img(src="./img/logo-white.svg" width="137" height="35" alt="Перко - автоматические шлагбаумы")
+      nav.bc__header-menu
+        ul.bc__header-menu-container
+          li.bc__header-menu-item
+            a(href="#specifications") Характеристики
+          li.bc__header-menu-item
+            a(href="#config") Конфигурация
+          li.bc__header-menu-item
+            a(href="#examples") Установки
+          li.bc__header-menu-item
+            a(href="#feedback") Контакты
+      div.bc__header-control
+        button.bc__button.bc__button--outline Подобрать шлагбаум
+        div.bc__header-mobile-control
+          div.bc__control-mobile-wrapper
+            button.bc__button__phone
+              img(src="./img/icon-phone.svg" width="24" height="24" alt="Позвонить" title="Позвонить")
+          div.bc__control-mobile-wrapper.js-open-menu
+            button.bc__burger
+              span.line.line-1
+              span.line.line-2
+              span.line.line-3
+
+  +mobileMenu("1")
+
+  .bc-container
+    h1.bc__head--h1 Автоматические шлагбаумы
+      div.bc__head--subtitle сделано в России
+
+    div.bc-content
+      h2.bc__head--h2 
+        | Подберите шлагбаум под свои задачи
+
+      section.bc__section
+        h3.bc__section-title 
+          | 1.
+          span Выберите дизайн
+        div.bc__options
+          div.bc__option
+            label.bc__option-label
+              div.bc__option-content
+                .bc__option-image
+                  img(src='/img/standart.png' alt='Стандарт')
+
+                div.bc__option-wrapper
+                  div.bc__option-title
+                    +radio('check-standard', 'design', 'standard', '', true)
+                    h6 Стандарт
+                  ul.bc__option-list
+                    li Место для установки фотоэлемента
+
+          div.bc__option
+            label.bc__option-label
+              div.bc__option-content
+                .bc__option-image
+                  img(src='/img/premium.png' alt='Премиум')
+                div.bc__option-wrapper
+                  div.bc__option-title
+                    +radio('check-premium', 'design', 'premium', '')
+                    h6 Премиум
+                  ul.bc__option-list
+                    li Сигнальная индикация
+                    li Встроеннный фотоэлемент
+                    li Датчик вскрытия корпуса
+                    li Удобный доступ к плате управления
+
+      section.bc__section
+        h3.bc__section-title
+          | 2.
+          span Укажите ширину проезда в метрах
+        div.bc__section-wrapper
+          h4.bc__section-title-small Длина шлагбаума 
+          div.bc__height-control
+            div.bc__height-control-inner
+              input.bc__height-radio(id="height-2.3" type='radio' name='height' value='2.3')
+              label.bc__height-segment.bc__height-segment--first(for="height-2.3") 2.3
+           
+            div.bc__height-control-inner
+              input.bc__height-radio(id="height-3" type='radio' name='height' value='3' checked='')
+              label.bc__height-segment(for="height-3") 3
+             
+            div.bc__height-control-inner
+              input.bc__height-radio(id="height-4.3" type='radio' name='height' value='4.3')
+              label.bc__height-segment(for="height-4.3") 4.3
+             
+            div.bc__height-control-inner
+              input.bc__height-radio(id="height-6" type='radio' name='height' value='6')
+              label.bc__height-segment(for="height-6") 6
+          
+          h5.bc__section-title-xs-small Укажите ширину проезда
+          div.bc__width-slider
+            div.bc__width-slider-track
+              input.bc__width-slider-input(
+                type='range' 
+                name='width' 
+                min='2' 
+                max='6' 
+                step='0.1' 
+                value='2.7'
+              )
+            div.bc__width-slider-labels
+              span.bc__width-slider-label-min 2 м
+              span.bc__width-slider-value 2.7
+              span.bc__width-slider-label-max 6 м
+
+
+      section.bc__section
+        h3.bc__section-title 
+          | 3. 
+          span Есть особые условия эксплуатации?
+        div.bc__section-wrapper
+          div.bc__conditions
+            +radio('condition-temp', 'conditions', 'temp', 'Температура до -60 °С')
+            +radio('condition-speed', 'conditions', 'speed', 'Скорость открытия меньше 1,5 секунд')
+            +radio('condition-ceiling', 'conditions', 'ceiling', 'Потолок ниже 3 метров')
+
+      section.bc__section
+        h3.bc__section-title 
+          | 4. 
+          span Выберите тип стрелы
+        div.bc__section-content
+          div.bc__options
+            div.bc__option.bc__option-image--small
+              label.bc__option-label
+                div.bc__option-content
+                  .bc__option-image
+                    img(src='/img/signal.png' alt='')
+
+                  div.bc__option-wrapper
+                    div.bc__option-title
+                      +radio('check-signal', 'boom_type', 'signal', '', true)
+                      h3 С&nbsp;сигнальной индикацией и&nbsp;буферной накладкой
+
+            div.bc__option.bc__option-image--small
+              label.bc__option-label
+                div.bc__option-content
+                  .bc__option-image
+                    img(src='/img/windproof.png' alt='')
+                  div.bc__option-wrapper
+                    div.bc__option-title
+                      +radio('check-width', 'boom_type', 'signal', '')
+                      h3 Ветроустойчивая без индикации
+
+
+          div.bc__section-content
+            div.bc__button--wrapper
+              button.bc__button.bc__button--black Получить консультацию

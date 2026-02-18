@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <title>Главная — Таблица с графиком</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="css/lib/_mixins.css" />
+    <link rel="stylesheet" href="css/lib/_normalize.css" />
+    <link rel="stylesheet" href="css/lib/_variables.css" />
+    <link rel="stylesheet" href="css/blocks/prc-button.css" />
+    <link rel="stylesheet" href="css/blocks/prc-desktop.css" />
+    <link rel="stylesheet" href="css/blocks/prc-header.css" />
+    <link rel="stylesheet" href="css/blocks/prc-height.css" />
+    <link rel="stylesheet" href="css/blocks/prc-menu.css" />
+    <link rel="stylesheet" href="css/blocks/prc-mobile.css" />
+    <link rel="stylesheet" href="css/blocks/prc-modal.css" />
+    <link rel="stylesheet" href="css/blocks/prc-options.css" />
+    <link rel="stylesheet" href="css/blocks/prc-radio.css" />
+    <link rel="stylesheet" href="css/blocks/prc-special.css" />
+    <link rel="stylesheet" href="css/blocks/prc-width.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/helpers/_index.css" />
+    <link rel="stylesheet" href="css/helpers/functions.css" />
+    <link rel="stylesheet" href="css/helpers/media.css" />
+  </head>
+  <body class="rs-body">
+    <main class="barrier-configurator" role="main">
+      <header class="bc__header">
+        <div class="bc__header-wrapper bc-container">
+          <div class="bc__header-logo"><a href="https://perco.ru" target="_blank"><img src="./img/logo-white.svg" width="137" height="35" alt="Перко - автоматические шлагбаумы" /></a></div>
+          <nav class="bc__header-menu">
+            <ul class="bc__header-menu-container">
+              <li class="bc__header-menu-item"><a href="#specifications">Характеристики</a></li>
+              <li class="bc__header-menu-item"><a href="#config">Конфигурация</a></li>
+              <li class="bc__header-menu-item"><a href="#examples">Установки</a></li>
+              <li class="bc__header-menu-item"><a href="#feedback">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="bc__header-control"><button class="bc__button bc__button--outline">Подобрать шлагбаум</button>
+            <div class="bc__header-mobile-control">
+              <div class="bc__control-mobile-wrapper"><button class="bc__button__phone"><img src="./img/icon-phone.svg" width="24" height="24" alt="Позвонить" title="Позвонить" /></button></div>
+              <div class="bc__control-mobile-wrapper js-open-menu"><button class="bc__burger"><span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span></button></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="bc__header-menu--mobile">
+        <nav class="bc-container">
+          <ul class="bc__header-menu--mobile-container">
+            <li class="bc__header-menu--mobile-item"><a href="#specifications">Характеристики</a></li>
+            <li class="bc__header-menu--mobile-item"><a href="#config">Конфигурация</a></li>
+            <li class="bc__header-menu--mobile-item"><a href="#examples">Установки</a></li>
+            <li class="bc__header-menu--mobile-item"><a href="#feedback">Получить консультацию</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="bc-container">
+        <h1 class="bc__head--h1">Автоматические шлагбаумы<div class="bc__head--subtitle">сделано в России</div>
+        </h1>
+        <div class="bc-content">
+          <h2 class="bc__head--h2"> Подберите шлагбаум под свои задачи</h2>
+          <section class="bc__section">
+            <h3 class="bc__section-title"> 1.<span>Выберите дизайн</span></h3>
+            <div class="bc__options">
+              <div class="bc__option"><label class="bc__option-label">
+                  <div class="bc__option-content">
+                    <div class="bc__option-image"><img src="/img/standart.png" alt="Стандарт" /></div>
+                    <div class="bc__option-wrapper">
+                      <div class="bc__option-title">
+                        <div class="bc__radio"><input class="bc__radio-input" id="check-standard" type="radio" name="design" value="standard" checked="checked" /><label class="bc__radio-label" for="check-standard"></label></div>
+                        <h6>Стандарт</h6>
+                      </div>
+                      <ul class="bc__option-list">
+                        <li>Место для установки фотоэлемента</li>
+                      </ul>
+                    </div>
+                  </div>
+                </label></div>
+              <div class="bc__option"><label class="bc__option-label">
+                  <div class="bc__option-content">
+                    <div class="bc__option-image"><img src="/img/premium.png" alt="Премиум" /></div>
+                    <div class="bc__option-wrapper">
+                      <div class="bc__option-title">
+                        <div class="bc__radio"><input class="bc__radio-input" id="check-premium" type="radio" name="design" value="premium" /><label class="bc__radio-label" for="check-premium"></label></div>
+                        <h6>Премиум</h6>
+                      </div>
+                      <ul class="bc__option-list">
+                        <li>Сигнальная индикация</li>
+                        <li>Встроеннный фотоэлемент</li>
+                        <li>Датчик вскрытия корпуса</li>
+                        <li>Удобный доступ к плате управления</li>
+                      </ul>
+                    </div>
+                  </div>
+                </label></div>
+            </div>
+          </section>
+          <section class="bc__section">
+            <h3 class="bc__section-title">2.<span>Укажите ширину проезда в метрах</span></h3>
+            <div class="bc__section-wrapper">
+              <h4 class="bc__section-title-small">Длина шлагбаума </h4>
+              <div class="bc__height-control">
+                <div class="bc__height-control-inner"><input class="bc__height-radio" id="height-2.3" type="radio" name="height" value="2.3" /><label class="bc__height-segment bc__height-segment--first" for="height-2.3">2.3</label></div>
+                <div class="bc__height-control-inner"><input class="bc__height-radio" id="height-3" type="radio" name="height" value="3" checked="" /><label class="bc__height-segment" for="height-3">3</label></div>
+                <div class="bc__height-control-inner"><input class="bc__height-radio" id="height-4.3" type="radio" name="height" value="4.3" /><label class="bc__height-segment" for="height-4.3">4.3</label></div>
+                <div class="bc__height-control-inner"><input class="bc__height-radio" id="height-6" type="radio" name="height" value="6" /><label class="bc__height-segment" for="height-6">6</label></div>
+              </div>
+              <h5 class="bc__section-title-xs-small">Укажите ширину проезда</h5>
+              <div class="bc__width-slider">
+                <div class="bc__width-slider-track"><input class="bc__width-slider-input" type="range" name="width" min="2" max="6" step="0.1" value="2.7" /></div>
+                <div class="bc__width-slider-labels"><span class="bc__width-slider-label-min">2 м</span><span class="bc__width-slider-value">2.7</span><span class="bc__width-slider-label-max">6 м</span></div>
+              </div>
+            </div>
+          </section>
+          <section class="bc__section">
+            <h3 class="bc__section-title"> 3. <span>Есть особые условия эксплуатации?</span></h3>
+            <div class="bc__section-wrapper">
+              <div class="bc__conditions">
+                <div class="bc__radio"><input class="bc__radio-input" id="condition-temp" type="radio" name="conditions" value="temp" /><label class="bc__radio-label" for="condition-temp">Температура до -60 °С</label></div>
+                <div class="bc__radio"><input class="bc__radio-input" id="condition-speed" type="radio" name="conditions" value="speed" /><label class="bc__radio-label" for="condition-speed">Скорость открытия меньше 1,5 секунд</label></div>
+                <div class="bc__radio"><input class="bc__radio-input" id="condition-ceiling" type="radio" name="conditions" value="ceiling" /><label class="bc__radio-label" for="condition-ceiling">Потолок ниже 3 метров</label></div>
+              </div>
+            </div>
+          </section>
+          <section class="bc__section">
+            <h3 class="bc__section-title"> 4. <span>Выберите тип стрелы</span></h3>
+            <div class="bc__section-content">
+              <div class="bc__options">
+                <div class="bc__option bc__option-image--small"><label class="bc__option-label">
+                    <div class="bc__option-content">
+                      <div class="bc__option-image"><img src="/img/signal.png" alt="" /></div>
+                      <div class="bc__option-wrapper">
+                        <div class="bc__option-title">
+                          <div class="bc__radio"><input class="bc__radio-input" id="check-signal" type="radio" name="boom_type" value="signal" checked="checked" /><label class="bc__radio-label" for="check-signal"></label></div>
+                          <h3>С сигнальной индикацией и буферной накладкой</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </label></div>
+                <div class="bc__option bc__option-image--small"><label class="bc__option-label">
+                    <div class="bc__option-content">
+                      <div class="bc__option-image"><img src="/img/windproof.png" alt="" /></div>
+                      <div class="bc__option-wrapper">
+                        <div class="bc__option-title">
+                          <div class="bc__radio"><input class="bc__radio-input" id="check-width" type="radio" name="boom_type" value="signal" /><label class="bc__radio-label" for="check-width"></label></div>
+                          <h3>Ветроустойчивая без индикации</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </label></div>
+              </div>
+              <div class="bc__section-content">
+                <div class="bc__button--wrapper"><button class="bc__button bc__button--black">Получить консультацию</button></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/app.js"> </script>
+  </body>
+</html>

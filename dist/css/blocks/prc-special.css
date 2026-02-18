@@ -1,0 +1,21 @@
+.barrier-configurator .bc__conditions {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+}
+
+@media screen and (min-width: 28.1875rem) {
+  .barrier-configurator .bc__conditions {
+    gap: 0.25rem;
+  }
+}
+
+@media screen and (min-width: 37.5625rem) {
+  .barrier-configurator .bc__conditions {
+    gap: 0.625rem;
+  }
+}
+
+/*# sourceMappingURL=prc-special.css.map */

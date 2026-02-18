@@ -1,0 +1,373 @@
+@import "../lib/mixins";
+@import "../lib/variables";
+
+.barrier-configurator .bc__options {
+  display: flex;
+  gap: 32px;
+  margin-left: 52px;
+  margin-right: 52px;
+}
+
+.barrier-configurator .bc__option {
+  background-color: var(--color-white);
+  display: flex;
+  padding-top: 20px;
+  padding-left: 38px;
+  padding-bottom: 32px;
+  padding-right: 38px;
+  @include border-radius(40px);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  max-width: 50%;
+  transition: border-color 0.3s;
+
+  &:has(.bc__radio-input:checked) {
+    box-shadow: 0 0 0 1px var(--text-black);
+  }
+
+  .bc__option-label {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+  }
+
+  &-content {
+    align-self: flex-end;
+    width: 100%;
+    transition: all 0.3s;
+  }
+
+  &-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: all 0.3s;
+    position: relative;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      padding-left: 24px;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-right: 24px;
+  }
+
+  &.bc__option-image--small {
+    padding-top: 0;
+
+    .bc__option-image {
+      height: 200px;
+    }
+
+    .bc__option-wrapper {
+      margin-top: 0;
+    }
+  }
+
+  &-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .bc__radio-item {
+      flex-shrink: 0;
+    }
+
+    h6 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+      word-break: break-word;
+    }
+  }
+
+  &-list {
+    margin-top: 12px;
+    margin-left: 48px;
+
+    li {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      word-break: break-word;
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .barrier-configurator {
+    .bc__options {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .bc__option {
+      padding: 20px 40px 32px 36px;
+    }
+
+    .bc__option-image {
+      margin-top: 0;
+
+      img {
+        padding: 24px 28px 0 24px;
+      }
+    }
+
+    .bc__options {
+      .bc__option.bc__option-image--small {
+        padding-top: 0;
+
+        .bc__option-image {
+          height: 200px;
+        }
+
+        .bc__option-image img {
+          padding: 0;
+        }
+
+        .bc__option-wrapper {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .bc__option-title h3 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .barrier-configurator {
+    .bc__option {
+      padding-top: 0;
+    }
+
+    .bc__option-wrapper {
+      margin-top: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .barrier-configurator {
+    .bc__option {
+      padding-top: 0;
+      padding-bottom: 32px;
+    }
+
+    .bc__options {
+      .bc__option {
+        border-radius: 31px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 0;
+        padding-bottom: 32px;
+      }
+    }
+
+    .bc__option-wrapper {
+      margin-top: 0;
+    }
+
+    .bc__option-title {
+      gap: 8px;
+    }
+
+    .bc__option-list {
+      margin-left: 40px;
+      margin-top: 8px;
+    }
+
+    .bc__option-image {
+      margin-top: 0;
+
+      img {
+        padding: 32px 32px 0 32px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .barrier-configurator {
+    .bc__options {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .bc__option {
+      max-width: 100%;
+    }
+
+    .bc__option-title {
+      gap: 8px;
+    }
+
+    .bc__option-list {
+      margin-left: 40px;
+      margin-top: 8px;
+    }
+
+    .bc__option-image img {
+      padding: 0 2rem;
+    }
+
+    .bc__options {
+      .bc__option {
+        min-height: auto;
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+    }
+
+    .bc__option-list li {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .bc__option-title h3 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 712px) {
+  .barrier-configurator {
+    .bc__options {
+      gap: 20px;
+    }
+
+    .bc__options {
+      .bc__option {
+        padding-top: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .barrier-configurator {
+    .bc__options {
+      .bc__option {
+        border-radius: 25px;
+      }
+    }
+
+    .bc__option-wrapper {
+      margin-top: 0;
+    }
+
+    .bc__option-image {
+      height: 200px;
+    }
+
+    .bc__option-title h3 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .barrier-configurator {
+    .bc__option {
+      padding-top: 16px;
+      padding-bottom: 24px;
+    }
+
+    .bc__options {
+      .bc__option {
+        border-radius: 20px;
+        min-height: auto;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-top: 16px;
+        padding-bottom: 24px;
+      }
+    }
+
+    .bc__option-title {
+      gap: 4px;
+    }
+
+    .bc__option-image {
+      height: 155px;
+      margin-top: 0;
+      border-radius: 20px;
+
+      img {
+        padding: 0;
+      }
+    }
+
+    .bc__options {
+      display: flex;
+      gap: 12px;
+    }
+
+    .bc__options {
+      .bc__option.bc__option-image--small {
+        .bc__option-image {
+          height: 100px;
+        }
+      }
+    }
+
+    .bc__options {
+      .bc__option.bc__option-image--small {
+        padding-left: 0;
+        padding-right: 0;
+
+        .bc__option-image {
+          left: -15px;
+        }
+
+        .bc__option-wrapper {
+          margin-left: 38px;
+        }
+      }
+    }
+
+    .bc__option-wrapper {
+      margin-right: 0;
+      margin-top: 0;
+    }
+
+    .bc__option-list {
+      margin-left: 0;
+      margin-top: 8px;
+    }
+
+    .bc__option-title h2 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    .bc__option-title h3 {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .bc__option-wrapper .bc__option-list li {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
