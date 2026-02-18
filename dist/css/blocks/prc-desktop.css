@@ -1,3 +1,20 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --text-black: #22252F;
+  --border-gray: #2D333C;
+  --gray-400: #E2E3EA;
+  --text-gray-light: #7F808A;
+  --text-gray: #8E8F9E;
+  --bg-soft: #efefef;
+  --bg-blue: #e0f2f7;
+  --bg-green: #e6ffe6;
+  --bg-red: #ffe6e6;
+  --bg-hover: #f9f9f9;
+  --color-green: #008000;
+  --color-red: #eb3423;
+}
+
 .bc-container {
   max-width: 103.5rem;
   width: 90%;
@@ -48,9 +65,9 @@
 
 .barrier-configurator .bc-content {
   margin: 0 auto;
-  padding: 5rem 3.75rem 6.25rem 3.75rem;
+  padding: 1.5rem 1rem 3.75rem;
   background-color: #E2E3EA;
-  border-radius: 2.8125rem;
+  border-radius: 1.25rem;
 }
 
 .barrier-configurator .bc__section {
@@ -90,6 +107,25 @@
   line-height: 1rem;
   margin-bottom: 1rem;
   color: var(--text-dark);
+}
+
+@media screen and (min-width: 85.4375rem) {
+  .barrier-configurator .bc-content {
+    padding: 3.75rem 3.75rem 6.25rem 3.75rem;
+    border-radius: 2.8125rem;
+  }
+}
+
+@media screen and (min-width: 56.375rem) {
+  .barrier-configurator .bc-content {
+    padding: 3.75rem 3rem 6.25rem;
+  }
+}
+
+@media screen and (min-width: 37.5625rem) {
+  .barrier-configurator .bc-content {
+    padding: 3rem 2rem 3.75rem;
+  }
 }
 
 /*# sourceMappingURL=prc-desktop.css.map */
