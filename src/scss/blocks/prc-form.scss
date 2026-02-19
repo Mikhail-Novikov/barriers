@@ -6,7 +6,7 @@
   background-color: #E2E3EA;
   border-radius: 16px;
   padding: 32px 16px;
-  margin-top: 32px;
+  margin-top: 4px;
 
   .bc__form-container {
     margin: 0 auto;
@@ -17,6 +17,9 @@
 
 @media screen and (min-width: #{$mobile-medium + 1}) {
   .barrier-configurator {
+    .bc__form {
+      margin-top: 90px;
+    }
     .bc__form-container {
       width: 90%;
     }

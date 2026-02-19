@@ -1,0 +1,82 @@
+@charset "UTF-8";
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --text-black: #22252F;
+  --border-gray: #2D333C;
+  --gray-400: #E2E3EA;
+  --text-gray-light: #7F808A;
+  --text-gray: #8E8F9E;
+  --bg-soft: #efefef;
+  --bg-blue: #e0f2f7;
+  --bg-green: #e6ffe6;
+  --bg-red: #ffe6e6;
+  --bg-hover: #f9f9f9;
+  --color-green: #008000;
+  --color-red: #eb3423;
+}
+
+.video-wrapper {
+  border-radius: 1.25rem;
+  height: 20.0625rem;
+  background: #000;
+  /* чтоб поля были черными, если пропорции не совпадают */
+  overflow: hidden;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.video-wrapper .start-video {
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  /* показать видео целиком без обрезки */
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-43%, -50%);
+  transform: translate(-43%, -50%);
+}
+
+@media screen and (min-width: 28.1875rem) {
+  .barrier-configurator .video-wrapper {
+    border-radius: 1.25rem;
+    height: 28.125rem;
+  }
+  .barrier-configurator .video-wrapper .start-video {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 56.375rem) {
+  .barrier-configurator .video-wrapper {
+    border-radius: 2.5rem;
+    height: 40rem;
+  }
+  .barrier-configurator .video-wrapper .start-video {
+    height: auto;
+    -webkit-transform: translate(-43%, -50%);
+    transform: translate(-43%, -50%);
+  }
+}
+
+@media screen and (min-width: 85.4375rem) {
+  .barrier-configurator .video-wrapper {
+    height: 40rem;
+  }
+  .barrier-configurator .video-wrapper .start-video {
+    width: 100%;
+    left: 0;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+  }
+}
+
+/*# sourceMappingURL=prc-promo.css.map */

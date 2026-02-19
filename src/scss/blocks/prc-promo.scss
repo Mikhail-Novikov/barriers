@@ -1,0 +1,69 @@
+@import "../lib/mixins";
+@import "../lib/variables";
+@import "../helpers/media";
+
+.video-wrapper {
+  border-radius: 20px; 
+
+  height: 321px;
+  background: #000;     /* чтоб поля были черными, если пропорции не совпадают */
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.video-wrapper .start-video {
+  height: 100%;
+  object-fit: contain;  /* показать видео целиком без обрезки */
+  display: block;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-43%, -50%);
+}
+
+@media screen and (min-width: #{$mobile-small + 1}) {
+  .barrier-configurator {
+    .video-wrapper {
+      border-radius: 20px;
+      height: 450px;
+    }
+    .video-wrapper .start-video {
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media screen and (min-width: #{$tablet + 1}) {
+  .barrier-configurator {
+
+    .video-wrapper {
+      border-radius: 40px;
+      height: 640px;
+    }
+
+    .video-wrapper .start-video {
+      height: auto;
+      transform: translate(-43%, -50%);
+    }
+  }
+}
+
+@media screen and (min-width: #{$desktop + 1}) {
+  .barrier-configurator {
+
+    .video-wrapper {
+      height: 640px;
+    }
+
+    .video-wrapper .start-video {
+      width: 100%;
+      left: 0;
+      transform: translate(0, -50%);
+    }
+  }
+}

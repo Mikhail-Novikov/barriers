@@ -19,7 +19,7 @@
   background-color: #E2E3EA;
   border-radius: 1rem;
   padding: 2rem 1rem;
-  margin-top: 2rem;
+  margin-top: 0.25rem;
 }
 
 .bc__form .bc__form-container {
@@ -29,6 +29,9 @@
 }
 
 @media screen and (min-width: 37.5625rem) {
+  .barrier-configurator .bc__form {
+    margin-top: 5.625rem;
+  }
   .barrier-configurator .bc__form-container {
     width: 90%;
   }

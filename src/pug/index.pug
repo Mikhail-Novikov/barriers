@@ -1,7 +1,8 @@
 include lib/variables
 include lib/mixins
 include blocks/page
-include components/mobileMenu
+include components/mobile-menu
+include components/promo-video
 include components/radio
 
 +page(pagesList.index.title)
@@ -37,6 +38,8 @@ include components/radio
   div.bc-container
     h1.bc__head--h1 Автоматические шлагбаумы
       div.bc__head--subtitle сделано в России
+
+    +promoVideo
   
   form.bc__form
     div.bc__form-container
