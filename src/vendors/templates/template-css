@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "<%= fontName %>";
+  src: url('<%= fontPath %><%= fontName %>.eot');
+  src: url('<%= fontPath %><%= fontName %>.eot?#iefix') format('embedded-opentype'),
+       url('<%= fontPath %><%= fontName %>.woff2') format('woff2'),
+       url('<%= fontPath %><%= fontName %>.woff') format('woff'),
+       url('<%= fontPath %><%= fontName %>.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "<%= fontName %>" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+
+  &:before {
+    display: inline-block;
+    text-align: center;
+    speak: none;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+<% _.forEach(glyphs, function(glyph, idx) { %>
+.icon-<%= glyph.fileName.replace(/^\d+-/, '') %>:before {
+  content: "\<%= ('000' + (0xE001 + idx).toString(16)).slice(-4) %>";
+}
+<% }); %>

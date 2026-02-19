@@ -1,5 +1,7 @@
 'use strict';
 
+import { template } from "babel-core";
+
 const src = 'src', dest = 'dist';
 
 export default {
@@ -14,7 +16,8 @@ export default {
   css: {
     src: `${src}/scss/**/*.scss`,
     dest: `${dest}/css`,
-    watch: `${src}/**/*.{css,scss}`
+    watch: `${src}/**/*.{css,scss}`,
+    template: `${src}/vendors/templates/*.{css,scss}`
   },
   js: {
     src: `${src}/js/**/*.js`,
@@ -28,6 +31,12 @@ export default {
     srcSVGSymbolsCSS: `${src}/vendors/svg-symbols/template-css`,
     destSVGSymbolsCSS: `${src}/vendors/svg-symbols`,
     watch: `${src}/img/**/*.*`
+  },
+  iconfont: {
+    src: `${src}/img/icons/**/*.svg`,
+    dest: `${dest}/fonts/`,
+    template: `${src}/vendors/templates/template-css`,
+    watch: `${src}/img/icons/**/*.svg`
   },
   copy: {
     src: [`${src}/favicon/**/*.*`, `${src}/fonts/**/*.*`, `${src}/vendors/**/*.*`, `${src}/data/**/*.*`],

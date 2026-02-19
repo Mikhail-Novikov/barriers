@@ -96,6 +96,13 @@
     border: none;
     cursor: pointer;
   }
+  .barrier-configurator .bc__header .bc__button__phone {
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+  .barrier-configurator .bc__header .bc__button__phone:hover {
+    color: var(--color-gray-200);
+  }
   .barrier-configurator .bc__header .line {
     position: absolute;
     width: 100%;

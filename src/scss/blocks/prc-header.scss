@@ -93,10 +93,6 @@
 @media screen and (max-width: #{$mobile_header + 'px'}) {
   .barrier-configurator .bc__header {
 
-    &>.bc__header-wrapper {
-      padding: 14.5px 0;
-    }
-
     &-menu,
     &-control .bc__button {
       display: none;

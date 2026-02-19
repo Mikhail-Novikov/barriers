@@ -9,6 +9,7 @@ import img from './gulp/tasks/img';
 import copy from './gulp/tasks/copy';
 import watch from './gulp/tasks/watch';
 import server from './gulp/tasks/server';
+import iconfont from './gulp/tasks/iconfont';
 
 gulp.task('set-node-env-prod', function (done) {
   process.env.NODE_ENV = 'production';
@@ -20,6 +21,7 @@ gulp.task(html);
 gulp.task(css);
 gulp.task(js);
 gulp.task('img', img);
+gulp.task('iconfont', iconfont);
 gulp.task(copy);
 gulp.task(watch);
 gulp.task(server);

@@ -94,6 +94,15 @@
         cursor: pointer;
       }
 
+      .bc__button__phone {
+        font-size: 24px;
+        color: #ffffff;
+
+        &:hover {
+          color: var(--color-gray-200);
+        }
+      }
+
       .line {
         position: absolute;
         width: 100%;

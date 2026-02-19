@@ -6,65 +6,39 @@
   pointer-events: none;
 }
 
-.icon-svg-call-answer {
+.icon-svg-burger {
   width: 1em;
   height: 1em;
 }
 
-#icon-svg-call-answer {
+#icon-svg-burger {
   
 }
 
-.icon-svg-facebook-logo {
+.icon-svg-close-mobile {
+  width: 0.9090909090909091em;
+  height: 1em;
+}
+
+#icon-svg-close-mobile {
+  
+}
+
+.icon-svg-close {
   width: 1em;
   height: 1em;
 }
 
-#icon-svg-facebook-logo {
+#icon-svg-close {
   
 }
 
-.icon-svg-insta {
+.icon-svg-phone {
   width: 1em;
   height: 1em;
 }
 
-#icon-svg-insta {
+#icon-svg-phone {
   
 }
-
-.icon-svg-instagram-logo {
-  width: 1em;
-  height: 1em;
-}
-
-#icon-svg-instagram-logo {
-  
-}
-
-.icon-svg-instagram {
-  width: 1em;
-  height: 1em;
-}
-
-#icon-svg-instagram {
-  
-}
-
-.icon-svg-more {
-  width: 1.375em;
-  height: 1em;
-}
-
-#icon-svg-more {
-  
-}
-
-.icon-svg-vk {
-  width: 1em;
-  height: 1em;
-}
-
-#icon-svg-vk {
-  
-}
+

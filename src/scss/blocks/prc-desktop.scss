@@ -30,12 +30,11 @@
   }
 
   .h2, .bc__head--h2 {
-    font-size: 44px;
-    font-size: clamp(18px, 5vw, 44px);
+    font-size: clamp(24px, 5vw, 44px);
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
-    margin-bottom: 52px;
+    margin-bottom: 20px;
   }
 
   .bc__head--subtitle {
@@ -119,6 +118,10 @@
   .barrier-configurator {
     .bc-content {
       padding: 48px 32px 60px;
+    }
+    .h2, .bc__head--h2 {
+      font-size: 44px;
+      margin-bottom: 52px;
     }
   }
 }

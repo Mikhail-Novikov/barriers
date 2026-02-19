@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "gulp",
-    "prod": "gulp prod"
+    "prod": "gulp prod",
+    "iconfont": "gulp iconfont"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -16,14 +17,18 @@
     "babel-preset-env": "^1.7.0",
     "bemto.pug": "^2.1.0",
     "browser-sync": "^2.26.4",
+    "consolidate": "^1.0.4",
     "del": "^3.0.0",
     "emitty": "^1.4.0",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.10.0",
+    "gulp-consolidate": "^0.2.0",
     "gulp-cssimport": "^6.0.1",
     "gulp-debug": "^4.0.0",
     "gulp-filter": "^5.1.0",
+    "gulp-iconfont": "^10.0.3",
+    "gulp-iconfont-css": "^3.0.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-load-plugins": "^1.5.0",

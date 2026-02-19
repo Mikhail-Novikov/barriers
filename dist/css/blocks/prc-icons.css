@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "percoicon";
+  src: url("../../fonts/percoicon.eot");
+  src: url("../../fonts/percoicon.eot?#iefix") format("embedded-opentype"), url("../../fonts/percoicon.woff2") format("woff2"), url("../../fonts/percoicon.woff") format("woff"), url("../../fonts/percoicon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "percoicon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  display: inline-block;
+  text-align: center;
+  speak: none;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-burger:before {
+  content: "\e001";
+}
+
+.icon-close-mobile:before {
+  content: "\e002";
+}
+
+.icon-close:before {
+  content: "\e003";
+}
+
+.icon-phone:before {
+  content: "\e004";
+}
+
+/*# sourceMappingURL=prc-icons.css.map */

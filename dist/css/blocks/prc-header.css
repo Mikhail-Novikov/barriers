@@ -102,9 +102,6 @@
 }
 
 @media screen and (max-width: 64rem) {
-  .barrier-configurator .bc__header > .bc__header-wrapper {
-    padding: 0.90625rem 0;
-  }
   .barrier-configurator .bc__header-menu,
   .barrier-configurator .bc__header-control .bc__button {
     display: none;
