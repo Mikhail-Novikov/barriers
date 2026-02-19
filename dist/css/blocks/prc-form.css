@@ -16,10 +16,12 @@
 }
 
 .bc__form {
-  background-color: #E2E3EA;
+  background-color: #e2e3ea;
   border-radius: 1rem;
   padding: 2rem 1rem;
   margin-top: 0.25rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bc__form .bc__form-container {
@@ -30,10 +32,28 @@
 
 @media screen and (min-width: 37.5625rem) {
   .barrier-configurator .bc__form {
+    border-radius: 2.5rem;
+    margin-top: 1rem;
+    width: 90%;
+    max-width: 103.5rem;
+  }
+}
+
+@media screen and (min-width: 56.375rem) {
+  .barrier-configurator .bc__form {
+    margin-top: 2.5rem;
+  }
+  .barrier-configurator .bc__form-container {
+    padding: 3.75rem 5rem 7.5rem;
+  }
+}
+
+@media screen and (min-width: 85.4375rem) {
+  .barrier-configurator .bc__form {
     margin-top: 5.625rem;
   }
   .barrier-configurator .bc__form-container {
-    width: 90%;
+    padding: 3.75rem 5rem 7.5rem;
   }
 }
 

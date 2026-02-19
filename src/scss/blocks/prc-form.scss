@@ -3,10 +3,12 @@
 @import "../helpers/media";
 
 .bc__form {
-  background-color: #E2E3EA;
+  background-color: #e2e3ea;
   border-radius: 16px;
   padding: 32px 16px;
   margin-top: 4px;
+  margin-left: auto;
+  margin-right: auto;
 
   .bc__form-container {
     margin: 0 auto;
@@ -18,10 +20,34 @@
 @media screen and (min-width: #{$mobile-medium + 1}) {
   .barrier-configurator {
     .bc__form {
+      border-radius: 40px;
+      margin-top: 16px;
+      width: 90%;
+      max-width: 1656px;
+    }
+  }
+}
+
+@media screen and (min-width: #{$tablet + 1}) {
+  .barrier-configurator {
+    .bc__form {
+      margin-top: 40px;
+    }
+
+    .bc__form-container {
+      padding: 60px 80px 120px;
+    }
+  }
+}
+
+@media screen and (min-width: #{$desktop + 1}) {
+  .barrier-configurator {
+    .bc__form {
       margin-top: 90px;
     }
+
     .bc__form-container {
-      width: 90%;
+      padding: 60px 80px 120px;
     }
   }
 }
