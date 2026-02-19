@@ -4,7 +4,8 @@
 
 .bc-container {
   max-width: 1656px;
-  width: 90%;
+  padding-left: 16px;
+  padding-right: 16px;
   margin: 0 auto;
 }
 
@@ -26,7 +27,7 @@
     font-weight: 700;
     line-height: 120%;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
   }
 
   .h2, .bc__head--h2 {
@@ -116,9 +117,17 @@
 
 @media screen and (min-width: #{$mobile-medium + 1}) {
   .barrier-configurator {
+    .bc-container {
+      width: 90%;
+      padding-left: 0;
+      padding-right: 0;
+    }
     .bc-content {
       padding: 48px 32px 60px;
     }
+     .h1, .bc__head--h1 {
+       margin-bottom: 40px;
+     }
     .h2, .bc__head--h2 {
       font-size: 44px;
       margin-bottom: 52px;

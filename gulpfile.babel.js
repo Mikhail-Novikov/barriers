@@ -26,5 +26,5 @@ gulp.task(copy);
 gulp.task(watch);
 gulp.task(server);
 
-gulp.task('default', gulp.series('clean', 'img', gulp.parallel('html', 'css', 'js', 'copy'), gulp.parallel('watch', 'server')));
+gulp.task('default', gulp.series('clean', gulp.parallel('img', 'iconfont'), gulp.parallel('html', 'css', 'js', 'copy'), gulp.parallel('watch', 'server')));
 gulp.task('prod', gulp.series('set-node-env-prod', 'default'));

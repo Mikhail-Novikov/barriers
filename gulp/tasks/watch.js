@@ -17,6 +17,10 @@ export default function watch() {
       event !== 'unlink' ? global.scssChangedFile = filepath : undefined;
     });
   gulp.watch(paths.js.watch, gulp.series('js'));
+  gulp.watch(paths.iconfont.watch, gulp.series('iconfont'))
+    .on('all', (event, filepath) => {
+      console.log(`Watch 'iconfont:' => event: ${event}, filepath: ${filepath}`);
+    });
   gulp.watch(paths.img.watch, gulp.series('img'));
   gulp.watch(paths.copy.watch, gulp.series('copy'));
 };

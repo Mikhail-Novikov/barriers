@@ -84,7 +84,7 @@
     align-items: center;
   }
   .barrier-configurator .bc__header .bc__control-mobile-wrapper {
-    padding: 0.5rem;
+    padding: 0 0.5rem;
     cursor: pointer;
   }
   .barrier-configurator .bc__header .bc__burger {
@@ -101,7 +101,7 @@
     color: #ffffff;
   }
   .barrier-configurator .bc__header .bc__button__phone:hover {
-    color: var(--color-gray-200);
+    color: var(--color-black);
   }
   .barrier-configurator .bc__header .line {
     position: absolute;

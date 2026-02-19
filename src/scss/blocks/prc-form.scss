@@ -1,0 +1,24 @@
+@import "../lib/mixins";
+@import "../lib/variables";
+@import "../helpers/media";
+
+.bc__form {
+  background-color: #E2E3EA;
+  border-radius: 16px;
+  padding: 32px 16px;
+  margin-top: 32px;
+
+  .bc__form-container {
+    margin: 0 auto;
+    padding: 24px 16px 60px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (min-width: #{$mobile-medium + 1}) {
+  .barrier-configurator {
+    .bc__form-container {
+      width: 90%;
+    }
+  }
+}

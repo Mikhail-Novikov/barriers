@@ -4,5 +4,5 @@ import paths from '../paths';
 import del from 'del';
 
 export default function clean() {
-  return del(paths.clean);
+  return del([paths.clean, '!dist/fonts', '!dist/fonts/**']);
 };

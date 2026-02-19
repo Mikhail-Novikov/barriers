@@ -80,7 +80,7 @@
       }
 
       .bc__control-mobile-wrapper {
-        padding: 8px;
+        padding: 0 8px;
         cursor: pointer;
       }
 
@@ -99,7 +99,7 @@
         color: #ffffff;
 
         &:hover {
-          color: var(--color-gray-200);
+          color: var(--color-black);
         }
       }
 

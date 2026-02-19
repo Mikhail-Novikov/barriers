@@ -34,11 +34,12 @@ include components/radio
 
   +mobileMenu("1")
 
-  .bc-container
+  div.bc-container
     h1.bc__head--h1 Автоматические шлагбаумы
       div.bc__head--subtitle сделано в России
-
-    div.bc-content
+  
+  form.bc__form
+    div.bc__form-container
       h2.bc__head--h2 
         | Подберите шлагбаум под свои задачи
 
@@ -85,15 +86,15 @@ include components/radio
             div.bc__height-control-inner
               input.bc__height-radio(id="height-2.3" type='radio' name='height' value='2.3')
               label.bc__height-segment.bc__height-segment--first(for="height-2.3") 2.3
-           
+            
             div.bc__height-control-inner
               input.bc__height-radio(id="height-3" type='radio' name='height' value='3' checked='')
               label.bc__height-segment(for="height-3") 3
-             
+              
             div.bc__height-control-inner
               input.bc__height-radio(id="height-4.3" type='radio' name='height' value='4.3')
               label.bc__height-segment(for="height-4.3") 4.3
-             
+              
             div.bc__height-control-inner
               input.bc__height-radio(id="height-6" type='radio' name='height' value='6')
               label.bc__height-segment(for="height-6") 6

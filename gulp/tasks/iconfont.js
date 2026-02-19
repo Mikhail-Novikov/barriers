@@ -15,7 +15,7 @@ export default function iconfontTask() {
     .pipe(iconfontCSS({
       fontName: 'percoicon',
       path: paths.iconfont.template,
-      targetPath: path.join(__dirname, '../../src/scss/blocks/prc-icons.scss'),
+      targetPath: path.join(__dirname, '../../src/scss/blocks/_prc-icons.scss'),
       fontPath: '../../fonts/',
       startUnicode: 0xF001
     }))
