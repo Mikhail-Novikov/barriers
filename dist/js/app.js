@@ -4,13 +4,13 @@ $(document).ready(function () {
   const $widthSlider = $(".bc__width-slider-input");
   const $widthValue = $(".bc__width-slider-value");
   const $widthTrack = $(".bc__width-slider-track");
-  const $heightRadios = $(".bc__height-radio");
+  const $sliderHandleRadios = $(".slider__handle-radio");
 
   // Функция для получения значения ширины проезда по длине шлагбаума
-  function getWidthByHeight(height) {
-    const heightNum = parseFloat(height);
+  function getWidthByWidth(length) {
+    const lengthNum = parseFloat(length);
     // Значение сегмента напрямую соответствует значению слайдера
-    return heightNum;
+    return lengthNum;
   }
 
   function updateSlider(value) {
@@ -41,9 +41,9 @@ $(document).ready(function () {
   });
 
   // Обработчик изменения сегмента длины шлагбаума (обновляет слайдер)
-  $heightRadios.on("change", function () {
-    const height = parseFloat($(this).val());
-    const width = getWidthByHeight(height);
+  $sliderHandleRadios.on("change", function () {
+    const length = parseFloat($(this).val());
+    const width = getWidthByWidth(length);
 
     // Обновляем слайдер
     $widthSlider.val(width);
