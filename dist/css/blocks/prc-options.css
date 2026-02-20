@@ -77,7 +77,6 @@
   height: auto;
   -o-object-fit: cover;
   object-fit: cover;
-  padding-left: 1.5rem;
 }
 
 .barrier-configurator .bc__option-wrapper {
@@ -87,7 +86,7 @@
   flex-direction: column;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 1.25rem;
+  margin-top: 2rem;
   margin-right: 1.5rem;
 }
 
