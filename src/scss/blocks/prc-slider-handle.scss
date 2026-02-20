@@ -46,10 +46,9 @@
     padding: 12px 24px;
     color: var(--text-gray);
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 28px;
     cursor: pointer;
-    @include transition;
     @include border-radius(8px);
     user-select: none;
     flex-shrink: 0;

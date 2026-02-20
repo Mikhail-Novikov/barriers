@@ -92,6 +92,7 @@
 
 .barrier-configurator .bc__option.bc__option-image--small {
   padding-top: 0;
+  padding-bottom: 3.75rem;
 }
 
 .barrier-configurator .bc__option.bc__option-image--small .bc__option-image {

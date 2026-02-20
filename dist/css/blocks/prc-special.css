@@ -1,3 +1,20 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --text-black: #22252F;
+  --border-gray: #2D333C;
+  --gray-400: #E2E3EA;
+  --text-gray-light: #7F808A;
+  --text-gray: #8E8F9E;
+  --bg-soft: #efefef;
+  --bg-blue: #e0f2f7;
+  --bg-green: #e6ffe6;
+  --bg-red: #ffe6e6;
+  --bg-hover: #f9f9f9;
+  --color-green: #008000;
+  --color-red: #eb3423;
+}
+
 .barrier-configurator .bc__conditions {
   display: -ms-flexbox;
   display: flex;
@@ -15,6 +32,18 @@
 @media screen and (min-width: 37.5625rem) {
   .barrier-configurator .bc__conditions {
     gap: 0.625rem;
+  }
+}
+
+@media screen and (min-width: 37.5625rem) {
+  .barrier-configurator .bc__conditions {
+    gap: 0.625rem;
+  }
+}
+
+@media screen and (min-width: 87.5625rem) {
+  .barrier-configurator .bc__conditions {
+    gap: 1.875rem;
   }
 }
 

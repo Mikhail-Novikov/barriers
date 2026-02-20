@@ -122,7 +122,7 @@
 .barrier-configurator .bc__width-slider-label-max {
   font-size: 1.125rem;
   line-height: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--text-gray-light);
 }
 
@@ -147,7 +147,7 @@
 .barrier-configurator .bc__width-slider-value {
   position: absolute;
   font-size: 1.125rem;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--text-black);
   line-height: 1.5rem;
   pointer-events: none;

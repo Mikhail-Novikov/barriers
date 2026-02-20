@@ -1,3 +1,5 @@
+@import "../lib/variables";
+
 .barrier-configurator .bc__conditions {
     display: flex;
     flex-direction: column;
@@ -13,5 +15,17 @@
 @media screen and (min-width: 601px) {
     .barrier-configurator .bc__conditions {
         gap: 10px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .barrier-configurator .bc__conditions {
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: #{$desktop + 1}) {
+    .barrier-configurator .bc__conditions {
+        gap: 30px;
     }
 }
